@@ -9,7 +9,8 @@ print getTop();
 
 print "<h1>Hello World</h1>\n";
 
-if (isset($_SESSION['errors']) && count($_SESSION['errors']) > 0) {
+if (isset($_SESSION['errors']) && is_array($_SESSION['errors'] 
+	&& count($_SESSION['errors']) > 0) {
 	foreach ($_SESSION['errors'] as $error) {
 		print $error . "<br>";
 	}
