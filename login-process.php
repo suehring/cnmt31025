@@ -1,25 +1,21 @@
 <?php
-
+session_start();
 require_once("functions.php");
+$_SESSION['errors'] = array();
 
-$userError = "";
-$passError = "";
 if (!isset($_POST['username']) || empty($_POST['username'])) {
-	$userError = "Please fill in the username";
+	$_SESSION['errors'][] = "Please enter a username";
 }
 if (!isset($_POST['password']) || empty($_POST['password'])) {
-	$passError = "Please fill in the password";
+	$_SESSION['errors'][] = "Please enter a password";
 }
-print getTop();
 
-print "<h1>Login Process</h1>\n";
-print "<form action='login-process.php' method='POST'>\n";
-print "User: <input type='text' name='username'>" . $userError . "<br>\n";
-print "Pass: <input type='password' name='password'>" . $passError . "<br>\n";
-print "<input type='submit' name='submit_form'>\n";
-print "</form>\n";
+if ($_POST['username'] == "steve") {
+	die(header("Location: account.php"));
+} else {
+	$_SESSION['errors'][] = "User not found or password incorrect";
+}
 
-print getEnd();
-
-
-	
+if (isset($_SESSION['errors']) && count($_SESSION['errors']) > 0) {
+	die(header("Location: index.php"));
+}
