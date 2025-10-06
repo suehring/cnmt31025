@@ -3,7 +3,7 @@
 // todo: remove this when auth is ready
 function getLoggedInPage() {
 	$return = "";
-	$return "<h1>Hello, you are logged in</h1>";
+	$return .= "<h1>Hello, you are logged in</h1>";
 	return $return;
 }
 
