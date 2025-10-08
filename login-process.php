@@ -13,11 +13,11 @@ if (!isset($_POST['password']) || empty($_POST['password'])) {
 
 if ($_POST['username'] == "steve") {
 	$_SESSION['loggedIn'] = true;
-	die(header("Location: account.php"));
+	die(header("Location: " . PAGE_ACCOUNT));
 } else {
 	$_SESSION['errors'][] = "User not found or password incorrect";
 }
 
 if (count($_SESSION['errors']) > 0) {
-	die(header("Location: index.php"));
+	die(header("Location: " . PAGE_HOME));
 }
