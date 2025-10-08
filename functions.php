@@ -22,6 +22,7 @@ function getTop($title="My Page") {
 	$return .= "<!DOCTYPE html>\n";
 	$return .= "<html lang=\"en\">\n";
 	$return .= "<head>\n";
+	$return .= "<link rel=\"stylesheet\" href=\"style.css\">\n";
 	$return .= "<title>" . $title . "</title>\n";
 	$return .= "</head>\n";	
 	$return .= "<body>\n";
