@@ -1,5 +1,8 @@
 <?php
 
+define("PAGE_HOME","index.php");
+define("PAGE_ACCOUNT","account.php");
+
 // todo: remove this when auth is ready
 function getLoggedInPage() {
 	$return = "";
