@@ -1,10 +1,9 @@
 <?php
 session_start();
-
-if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] != true) {
-	die(header("Location: index.php"));
-}
 require_once("functions.php");
+if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] != true) {
+	die(header("Location: " . PAGE_HOME));
+}
 
 print getTop();
 
