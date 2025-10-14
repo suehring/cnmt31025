@@ -1,9 +1,10 @@
 <?php
 
-define("PAGE_HOME","index.php");
 define("PAGE_ACCOUNT","account.php");
+define("PAGE_HOME","index.php");
+define("PAGE_LANDING","customer.php");
+define("PAGE_LANDING","logout.php");
 
-// todo: remove this when auth is ready
 function getLoggedInPage() {
 	$return = "";
 	$return .= "<h1>Hello, you are logged in</h1>";
@@ -23,6 +24,7 @@ function getTop($title="My Page") {
 	$return .= "<html lang=\"en\">\n";
 	$return .= "<head>\n";
 	$return .= "<link rel=\"stylesheet\" href=\"style.css\">\n";
+	$return .= "<script src=\"script.js\"></script>\n";
 	$return .= "<title>" . $title . "</title>\n";
 	$return .= "</head>\n";	
 	$return .= "<body>\n";

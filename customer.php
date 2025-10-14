@@ -7,8 +7,9 @@ if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] != true) {
 
 print getTop();
 
-print "<h1>Your Account></h1>\n";
-print "<a href=\"" . PAGE_LANDING . "\">Home</a><br />\n";
+print "<h1>Welcome to the Customer Portal</h1>";
+
+print "<a href=\"" . PAGE_ACCOUNT . "\">Your Account</a><br />\n";
 print "<a href=\"" . PAGE_LOGOUT . "\">Logout</a><br />\n";
 
 print getEnd();

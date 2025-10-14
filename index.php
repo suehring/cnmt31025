@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
-	die(header("Location: account.php"));
+	die(header("Location: " . PAGE_LANDING));
 }
 require_once("functions.php");
 
