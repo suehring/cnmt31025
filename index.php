@@ -6,7 +6,8 @@ if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
 }
 require_once("functions.php");
 
-print getTop();
+$page = new MyNamespace\Page("Class Registration");
+print $page->getTopSection();
 
 print "<h1>Hello World</h1>\n";
 
@@ -23,5 +24,4 @@ print "User: <input type='text' name='username'><br>\n";
 print "Pass: <input type='password' name='password'><br>\n";
 print "<input type='submit' name='submit_form'>\n";
 print "</form>\n";
-
-print getEnd();
+print $page->getBottomSection();

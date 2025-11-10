@@ -3,7 +3,7 @@
 define("PAGE_ACCOUNT","account.php");
 define("PAGE_HOME","index.php");
 define("PAGE_LANDING","customer.php");
-define("PAGE_LANDING","logout.php");
+define("PAGE_LOGOUT","logout.php");
 
 function getLoggedInPage() {
 	$return = "";
