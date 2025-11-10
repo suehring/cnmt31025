@@ -1,4 +1,5 @@
 <?php
+require_once("classes/Page/Page.php");
 session_start();
 if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
 	die(header("Location: " . PAGE_LANDING));
